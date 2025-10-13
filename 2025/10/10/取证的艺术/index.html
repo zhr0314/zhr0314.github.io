@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">227</span>
+            <span class="post-count">462</span>
         </span>
     </span>
 
@@ -127,6 +127,34 @@
 <p>在此给出两题的附件：</p>
 <p>镜像：<a href="/downloads/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/Project.zip">下载 Project.zip</a></p>
 <p>流量：<a href="/downloads/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/%E7%9B%91%E5%90%AC%E8%AE%B0%E5%BD%95.pcapng">下载 监听记录.pcapng</a></p>
+<p>ps:这题就是迎新赛的deltafuck-3，自己出的题，直接复用（</p>
+<hr>
+<h2 id="镜像-1"><a href="#镜像-1" class="headerlink" title="镜像"></a>镜像</h2><p>设计思路：把虚拟机挂在vmware上并运行，用简单的Linux命令即可获取flag</p>
+<hr>
+<p>打开压缩包，可以看到以下几个文件：</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/2.png"></p>
+<p>其中.vmdk和.vmx是vmware的标准虚拟机格式，可以用这两个文件直接运行此虚拟机</p>
+<hr>
+<p>扔进vmware:</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/3.png"></p>
+<p>选择刚才的.vmx文件即可读取</p>
+<p>开启虚拟机前，注意到光盘位挂载了一个文件：</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/4.png"></p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/5.png"></p>
+<p>就是虚拟机文件夹里的第三个文件。</p>
+<hr>
+<p>开机，在经过一个加载流程后，会进入一个简单的shell。</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/6.png"></p>
+<p>那么flag在哪里呢？</p>
+<p>（以下为Linux部分，跟取证实际上没有太大关系了）</p>
+<p>遇事不决敲<code>ls</code>:</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/7.png"></p>
+<p>然后就是大家喜闻乐见的<code>cat flag</code>环节:</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/8.png"></p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/1.jpg"> 秒了，没什么好说的（</p>
+<p>至于旁边的hint嘛…</p>
+<p><img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/9.png"></p>
+<p>这是留给你们的实操题 <img src="/images/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/2.jpg"></p>
  
       <!-- reward -->
       
