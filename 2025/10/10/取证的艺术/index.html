@@ -80,7 +80,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">542</span>
+            <span class="post-count">590</span>
         </span>
     </span>
 
@@ -89,7 +89,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -113,22 +113,22 @@
 <p><strong>流量取证</strong>：分析网络数据包，追踪攻击路径与通信行为。<br><strong>镜像取证</strong>：分析磁盘镜像文件，恢复被删除或隐藏的数据。<br><strong>内存取证</strong>：分析内存转储，提取系统运行时进程、密码等易失性证据。</p>
 <hr>
 <h1 id="需要使用的工具（此处仅给出我本人使用的）"><a href="#需要使用的工具（此处仅给出我本人使用的）" class="headerlink" title="需要使用的工具（此处仅给出我本人使用的）"></a>需要使用的工具（此处仅给出我本人使用的）</h1><h2 id="流量"><a href="#流量" class="headerlink" title="流量"></a>流量</h2><ul>
-<li>流量分析软件：wireshark: <a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">https://www.wireshark.org/download.html</a></li>
+<li>流量分析软件：wireshark: <a target="_blank" rel="noopener" href="https://www.wireshark.org/download.html">官网</a></li>
 </ul>
 <h2 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h2><ul>
-<li>虚拟机软件：VMWare Workstation </li>
-<li>镜像读取/挂载软件：FTK Imager <a href="/downloads/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/Exterro_FTK_Imager_(x64).exe">下载安装包</a> , Disk Genius（话说拿分区软件做取证题是不是有点抽象）</li>
+<li>虚拟机软件：VMWare Workstation <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1tSglhTw2DofiosNzDzqJhQ?pwd=4udc">百度网盘</a></li>
+<li>镜像读取/挂载软件：FTK Imager <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1LnuaE2sK3rtv3Sv46RELCA?pwd=8rc3">百度网盘</a> , Disk Genius（话说拿分区软件做取证题是不是有点抽象）<br>ps:由于VMWare和FTK Imager的官网下载要填一大堆信息，所以直接把安装包放上来了，但由于github单文件上限100MB，故放百度网盘了（悲）</li>
 </ul>
 <h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><ul>
-<li>唯一真神：volatility2（不建议用vol3）:<a target="_blank" rel="noopener" href="https://github.com/volatilityfoundation/volatility">https://github.com/volatilityfoundation/volatility</a></li>
+<li>唯一真神：volatility2（不建议用vol3）:<a target="_blank" rel="noopener" href="https://github.com/volatilityfoundation/volatility">Github页</a></li>
 </ul>
 <p>还有一些misc相关工具（如密码爆破等），就不一一赘述了</p>
 <hr>
 <h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><p>由于时间和篇幅有限，所以只讲两个小方向：简单的镜像取证和usb-hid流量取证。</p>
-<p>在此给出两题的附件：</p>
+<p>在此给出两道例题的附件：</p>
 <p>镜像：<a href="/downloads/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/Project.zip">下载 Project.zip</a></p>
 <p>流量：<a href="/downloads/%E5%8F%96%E8%AF%81%E7%9A%84%E8%89%BA%E6%9C%AF/%E7%9B%91%E5%90%AC%E8%AE%B0%E5%BD%95.pcapng">下载 监听记录.pcapng</a></p>
-<p>ps:这题就是迎新赛的deltafuck-3，自己出的题，直接复用（</p>
+<p>ps:流量的例题就是迎新赛的deltafuck-3，自己出的题，直接复用（</p>
 <hr>
 <h2 id="镜像-1"><a href="#镜像-1" class="headerlink" title="镜像"></a>镜像</h2><p>设计思路：把虚拟机挂在vmware上并运行，用简单的Linux命令即可获取flag</p>
 <hr>
